@@ -1,0 +1,82 @@
+/*
+    Copyright 2005-2007 Vsevolod Yevgiyenko
+    All Rights Reserved
+    E-mail: inform@cipherwall.com
+*/
+
+#ifndef _ERRORS_H_
+#define _ERRORS_H_
+typedef enum _CWERROR {
+    CW_ER_OK = 0,
+    CW_ER_VERSION,
+    CW_ER_INTERNAL,
+
+    CW_ER_MEMORY,
+
+    CW_ER_WRONG_CONFIG,
+
+    CW_ER_CREATE_FILE,
+    CW_ER_OPEN_FILE,
+    CW_ER_READ_FILE,
+    CW_ER_WRITE_FILE,
+    CW_ER_SEEK_FILE,
+    CW_ER_CHDIR,
+    CW_ER_RM_FILE,
+
+    CW_ER_WRONG_MAIL_FILE,
+    CW_ER_WRONG_KU_FILE,
+    CW_ER_WRONG_KR_FILE,
+
+    CW_ER_SOCKET,
+    CW_ER_WRONG_PCKT,
+    CW_ER_WRONG_HMAC,
+    CW_ER_SEND,
+    CW_ER_RECV,
+    CW_ER_RECV_TIMEOUT,
+    CW_ER_DATA_LEFT,
+
+    CW_ER_WRONG_CERT_VERSION,
+    CW_ER_KU_VERSION,
+    CW_ER_KR_VERSION,
+    CW_ER_WRONG_CERT,
+    CW_ER_CERT_TIMEOUT,
+    CW_ER_WRONG_SIGN,
+    CW_ER_WRONG_HASH,
+    CW_ER_RSA_KEYGEN,
+
+    CW_ER_CREATE_THREAD,
+
+    CW_ER_LIST,
+
+    CW_ER_ACCESS_DENIED,
+    CW_ER_SIZE_LIMIT,
+    CW_ER_QUOTA,
+    CW_ER_WRONG_IP,
+    CW_ER_NO_QUERIED_INFO,
+    CW_ER_LOCKED,
+    CW_ER_NO_RCPT,
+    CW_ER_USER_EXISTS,
+    CW_ER_HAS_CERT,
+    CW_ER_MAKE_CERT,
+    CW_ER_MAX_IN_CONN,
+    CW_ER_MAX_OUT_CONN,
+
+    CW_ER_OPEN_DB,
+    CW_ER_CLOSE_DB,
+    CW_ER_DB_QUERY,
+
+    CW_ER_WRONG_ADMIN,
+
+    CW_ER_COMPRESS,
+    CW_ER_DECOMPRESS,
+
+    CW_ER_PROXY,
+
+    CW_ER_RND,
+
+    CW_ER_EFS
+} CWERROR;
+
+const char *err2str(const CWERROR err);
+
+#endif
